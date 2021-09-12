@@ -68,7 +68,7 @@ $(function () {
             data : $(this).serialize(),
             success : function(res){
                 if(res.status !== 0){
-                    // console.log(res);
+                    // console.log('咋整的');
                     return layer.msg('登陆失败');
                 }
                 layer.msg('登陆成功了！');
