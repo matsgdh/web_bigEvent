@@ -45,6 +45,7 @@ $(function () {
             if (res.status !== 0) {
                 // 使用layui优化效果
                 // return alert(res.message);
+              
                 return layer.msg(res.message);
             }
             // console.log('注册成功了！');
@@ -52,6 +53,7 @@ $(function () {
             // 注册成功跳转回登陆页面
             $('#link_login').click();
         })
+       
     })
 
     // 监听登陆表单的提交事件
@@ -66,6 +68,7 @@ $(function () {
             data : $(this).serialize(),
             success : function(res){
                 if(res.status !== 0){
+                    // console.log(res);
                     return layer.msg('登陆失败');
                 }
                 layer.msg('登陆成功了！');
@@ -75,5 +78,6 @@ $(function () {
                 location.href = './index.html';
             }
         })
+        
     })
 })
