@@ -13,7 +13,7 @@ $.ajaxPrefilter(function(options) {
 
     //设置用户权限、没登陆不能访问后台主页
     options.complete = function(res) {
-        console.log(res);
+        // console.log(res);
         if (res.responseJSON.status === 1){
             // 1.强制清除·token
             localStorage.removeItem('token');
